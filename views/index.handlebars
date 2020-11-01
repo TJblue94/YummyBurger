@@ -1,0 +1,55 @@
+<h1>"MMMMMMMM that is a juicy burger" - SLJ</h1>
+
+<ul>
+  {{#each burgers}}
+    {{#unless Devoured}}
+      {{> burgers/burger-block Devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+{{!-- need to make two different sections for the ordered lists 
+the devoured burgers render on the right and the uneaten burgers
+render on the left --}}
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+    <li>{{burger}}
+      	<button class="devoured" data-devoured="{{devoured}}" data-id="{{id}}">EAT!
+
+	</button>
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+
+
+</li>
+ 
+
+    {{/unless}}
+  {{/each}}
+</ul>
+
+
+
+<ol>
+  {{#each burgers}}
+  {{#if devoured}}
+    <li>
+       
+      	<button class="devoured" data-devoured="{{devoured}}" data-id="{{id}}">Wasn't That Yummy?
+	</button>
+    {{/if}}
+  {{/each}}
+</ol>
+<footer>
+<h2>These burgers was fireee!</h2>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="nom">Burger Name:</label>
+    <input type="text" id="nom" name="name">
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
+</footer>

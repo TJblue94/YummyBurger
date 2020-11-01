@@ -1,0 +1,32 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+
+ul {
+  width:50%;
+  position: relative;
+  float: left;
+}
+
+  .label {
+    font-weight: bold;
+  }
+  
+  .create-update-form {
+    padding: 5px;
+    margin: 5px;
+    background: aqua;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
+  
+
+ footer {
+  clear: both;
+  margin-bottom: 0;
+ }
